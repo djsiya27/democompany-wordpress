@@ -1,0 +1,373 @@
+/*
+Theme Name: Demo Company
+Author: Siyabonga Majola
+Author URI: www.siyabonga-majola.co.za
+Version: 1.0.0
+*/
+
+/* Basic styling */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+header{
+    background-image: url(./images/header-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 115px;
+}
+
+
+.navbar{
+    position:sticky!important;
+    top:0!important;
+    display: flex!important;
+    justify-content: space-between!important;
+    z-index: 1;
+    padding: 1rem;
+}
+
+div#navbarNav {
+    justify-content: flex-end;
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li a{
+    color: #333;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+
+}
+
+.navbar ul li a:active{
+    color:#993408!important;
+
+}
+
+.navbar ul li a:hover{
+    color:#993408!important;
+
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #993408!important;
+}
+
+/* Slider Area */
+
+.slider-container{
+    background-image: url(./images/slider-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+div#carouselExampleCaptions{
+    padding: 22px 0 22px 0;
+}
+
+.carousel-caption.d-none.d-md-block {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 4%;
+    bottom: 0;
+    left: 60%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff!important;
+    text-align: center;
+    top: 0;
+}
+
+.carousel-indicators {
+    position: absolute;
+    right: 0!important;
+    bottom: 0!important;
+    left: 60%!important;
+    align-items: center;
+    z-index: 15!important;
+    display: -ms-flexbox;
+    display: inline-grid!important;
+    -ms-flex-pack: center;
+    justify-content: flex-end!important;
+     margin-right: 0!important; 
+     margin-left: 15%; 
+    list-style: none;
+    background-color: rgba(0,0,0,0.5);
+    top: 0!important;
+}
+
+h5.slider-heading {
+    color: #fff !important;
+    font-size: 24px!important;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 50px;
+    align-items: center;
+    
+}
+
+ol.carousel-indicators {
+    margin: 22px 0 22px 0;
+}
+
+
+p.slider-paragraph {
+    color: #fff!important;
+    font-family: Tahoma;
+    font-size: 14px;
+}
+
+.post-heading{
+    font-size: 15px;
+    color: #000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.child-pages {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+    color: #993408;
+    margin-left: 20px;
+    margin-top: 20px;
+   
+
+}
+
+.post-content{
+    margin-top: 20px;
+}
+
+.post-row{
+    border: #ebebeb 1px solid;
+}
+
+.box1{
+    background-color: #ebebeb;
+    min-height: 247px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.child-pages:hover{
+    color: #fff;
+    background-image: url(./images/arrow.png);
+    background-position: center;
+    
+    
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+h2.child-pages:first-child{
+    margin-top: 0;
+}
+
+h2.child-pages{
+   padding-left: 20px;
+   /*text-transform: uppercase;*/
+   padding-right: 20px;
+}
+
+.col.col-lg-2{
+    margin:20px;
+}
+
+.box{
+    padding: 20px;
+}
+
+.post-heading{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    color:#000;
+    line-height: 20px;
+    padding-top: 10px!important;
+}
+
+.post-para{
+    font-family: Tahoma;
+    font-size: 13px;
+    color: #333;
+}
+
+.footer-section{
+    background-color: #f8f8f8;
+}
+
+.footer-header{
+    font-family: Tahoma;
+    color:#888;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-bottom: #999999 1px dotted;
+    padding-bottom: 20px;
+}
+
+
+.footer-blog-link{
+    list-style: none;
+    display: flex;
+    color: #999999;
+}
+
+.footer-blog-link p{
+    font-family: Tahoma;
+    font-size: 13px;
+    color: #888;
+    padding-left: 20px;
+    align-items: center;
+}
+
+.footer-blog-link p:hover {
+    color: #993408;
+}
+
+.fas {
+    color: #999999;
+}
+
+.fas:hover {
+    color: #993408;
+}
+
+.recent{
+    list-style: none;
+    display:inline-flex;
+    justify-content: space-between;
+}
+
+.social-facebook{
+    color: #999999;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.facebook{
+    padding-left: 15px;
+}
+
+.social-facebook:hover{
+    color: #1877f2;
+}
+
+
+.social-twitter{
+    color: #999999;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.twitter{
+    padding-left: 15px;
+}
+
+.social-twitter:hover{
+    color: #1da1f2;
+}
+
+
+.social-linkedin{
+    color: #999999;
+    list-style: none;
+    font-size: 1.2rem;
+    
+}
+
+.linkedin{
+    padding-left: 15px;
+}
+
+.social-linkedin:hover{
+    color:#007bb5;
+}
+
+
+
+.social-rss{
+    color: #999999;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.rss{
+    padding-left: 15px;
+}
+
+.social-rss:hover{
+    color:#ee802f;
+}
+
+.security
+{
+    list-style: none;
+    color: #888;
+    
+}
+
+.security:hover{
+    color: #993408;
+    cursor: pointer;
+}
+
+.footer{
+    background-image: url(./images/footer-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+
+
+.footer ul{
+    display: inline-flex;
+}
+
+.footer ul li{
+    list-style: none;
+    text-decoration: none;
+}
+
+.footer ul li a{
+    color: #666;
+    padding-left: 1rem;
+    font-size: 13px;
+    font-family: Tahoma;
+}
+
+.footer ul li a:hover{
+    text-decoration: none;
+    color: #993408;
+}
+
+.copyright{
+    color: #999;
+    font-family: Tahoma;
+    font-size: 13px;
+    padding-top: 14px;
+    padding-bottom: 30px;
+    padding-left: 0px;
+}
