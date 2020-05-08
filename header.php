@@ -46,7 +46,7 @@
                   <div class="carousel-item active">
                     <img src="<?php echo get_template_directory_uri(); ?>./images/Slider_img.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5 class="slider-heading">First slide label</h5>
+                      <h5 class="slider-heading">Slider Heading</h5>
                       <p class="slider-paragraph">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     </div>
                   </div>
