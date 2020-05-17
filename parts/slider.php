@@ -24,7 +24,7 @@ wp_reset_postdata();
 
 <div id="main-carousel" class="carousel slide" data-ride="carousel">
     
-    <ol class="carousel-indicators">
+    <ol id="myCarousel-indicators" class="carousel-indicators">
         <?php for($i=0;$i<count($slides);$i++) { ?>
         <li data-target="#main-carousel" data-slide-to="<?php echo $i ?>" <?php if($i==0) { ?>class="active"<?php } ?>></li>
         <?php } ?>

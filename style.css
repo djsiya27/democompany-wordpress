@@ -104,6 +104,18 @@ h2.slider-heading
     text-align: start;
 }
 
+.carousel-indicators li {
+    border-radius: 50%!important;
+    width: 12px!important;
+    height: 12px!important;
+    background-color: #ffffff;
+    margin-right: 15px!important;
+}
+
+.carousel-indicators li.active{
+    background-color: #cb6619!important;
+}
+
 .slider-excerpt{
     font-family: Tahoma;
     color: #ccc;
