@@ -63,7 +63,7 @@ div#navbarNav {
     color: #993408!important;
 }
 
-/* Slider Area 
+/* Slider Area */
 
 .slider-container{
     background-image: url(./images/slider-bg.png);
@@ -81,7 +81,7 @@ div#carouselExampleCaptions{
     background-color: rgba(0,0,0,0.5);
 }
 
-.carousel-caption {
+.carousel-caption  {
     position: absolute;
     right: 4%!important;
     bottom: 0!important;
@@ -91,8 +91,31 @@ div#carouselExampleCaptions{
     padding-bottom: 20px;
     color: #fff!important;
     text-align: center;
-    top: 0;
-    
+    top: 0; 
+}
+
+h2.slider-heading
+{
+    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+    padding-top: 30px;
+    padding-left: 25px;
+    text-align: start;
+}
+
+.slider-excerpt{
+    font-family: Tahoma;
+    color: #ccc;
+    font-size: 14px;
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-right: 30px;
+    text-align: start;
+}
+
+.container.slider{
+    padding-top: 20px;
 }
 
 
@@ -120,12 +143,23 @@ div#carouselExampleCaptions{
     top: 4%!important;
     z-index: 100!important;
     position: absolute!important;
+    
+    
 }
 .carousel-control-prev-icon{
     left: 102%!important;
     top: 5%!important;
     z-index: 100!important;
     position: absolute!important;
+    background-image: url(./images/slider-top-pagination.png)!important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-control-prev-icon:hover{
+    background-image: url(./images/slider-top-pagination-hov.png)!important;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .carousel-control-next {
@@ -133,12 +167,22 @@ div#carouselExampleCaptions{
     bottom: 4%!important;
     z-index: 100!important;
     position: absolute!important;
+    
 }
 .carousel-control-next-icon{
     left: 102%!important;
     bottom: 5%!important;
     z-index: 100!important;
     position: absolute!important;
+    background-image: url(./images/slider-bottom-pagination.png)!important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-control-next-icon:hover{
+    background-image: url(./images/slider-bottom-pagination-hov.png)!important;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 h5.slider-heading {
@@ -150,50 +194,15 @@ h5.slider-heading {
     
 }
 
-span.carousel-control-prev-icon {
-    
-color:#cb6619 !important;
-	background-image:url(./images/slider-top-pagination.png) !important;
-	
-}
-
-span.carousel-control-next-icon {
-    
-	 color:#cb6619 !important;
-	background-image:url(./images/slider-bottom-pagination.png) !important;
-	
-}
-
-    span.carousel-control-prev-icon:hover {
-    
-    color:#cb6619 !important;
-        background-image:url(./images/slider-top-pagination-hov.png) !important;
-        
-    }
-    
-    span.carousel-control-next-icon:hover {
-        
-         color:#cb6619 !important;
-        background-image:url(./images/slider-bottom-pagination-hov.png) !important;
-        
-    }
-
-   li #carouselExampleCaptions .active{
-        color:#cb6619 !important;
-        
-    }
-
-li.active{
-        background-image: url(./images/slider-pages.png) !important;
-        background-position: initial;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-
 ol.carousel-indicators {
     margin: 22px 0 22px 0;
 }
+
+ol.carousel-indicators li #carouselExampleCaptions .active{
+    color: #cb6619!important;
+    
+}
+
 
 
 p.slider-paragraph {
@@ -207,7 +216,7 @@ p.slider-paragraph {
     color: #000;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-*/
+
 .child-pages {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 17px;
@@ -440,180 +449,4 @@ h2.child-pages{
     padding-top: 14px;
     padding-bottom: 30px;
     padding-left: 0px;
-}
-
-
-/* Slider */
-
-.container-fluid{
-    padding: 0 0 0 0!important;
-    
-}
-
-.inner-background{
-    background-color: #949599;
-    height:343px;
-}
-
-.img-fluid{
-    height:300px!important;
-}
-
-
-.slick-list.draggable {
-    
-    
-} 
-
-.slider img{
-    background-position: center!important;
-}
-
-
-.col.md-4.slider-caption {
-    display: flex;
-    width: 300px;
-    position: absolute;
-    top: 167px;
-    left: 65%;
-    bottom: 20px;
-    height: 300px;
-    background-color: rgba(0,0,0,0.5);
-    border-right: 2px solid #fefefe;
-
-}
-
-
-h5.slider-heading {
-    color: #fff;
-    padding-left: 15px;
-    font-size: 24px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-transform: capitalize;
-    margin: 20px 0;
-   
-}
-
-p.slider-description {
-    padding-left: 15px;
-    color: #cccccc;
-    font-size: 14px;
-    line-height: 22px;
-    font-family: Tahoma;
-}
-
-.slick-dots {
-    position: absolute;
-    bottom: 25px;
-    display: flex;
-    width: 0!important;
-    padding: 5px;
-    margin: 0;
-    list-style: none;
-    left: 1067px;
-    top:60px!important;
-    background-color: rgba(0,0,0,0.3);
-    color: chocolate;
-    justify-content: space-between!important;
-    z-index: 1;
-}
-
-
-.slick-dots li {
-    position: relative;
-    display: flex;
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
-    padding: 0;
-    cursor: pointer;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px!important;
-    background-image: url(./images/Slider-dot.png);
-    background-repeat: no-repeat;
-    z-index: 1;
-}
-
-li.slick-active{
-    background-image: url(./images/slider-pages.png);
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    z-index: 1;
-    padding-left:20px!important;
-    margin-left: 9px!important;
-}
-
-.slick-next {
-    font-size: 0;
-    line-height: 0;
-    position: absolute;
-   
-    right:45px!important;
-    display: block;
-    width: 20px;
-    height: 20px;
-    padding: 0;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    cursor: pointer;
-    color: transparent;
-    border: none;
-    outline: none;
-    background: transparent;
-    z-index: 1;
-    left:1070px!important;
-}
-
-button.slick-next.slick-arrow {
-    right: 8%!important;
-    position: absolute;
-    background-image: url(./images/slider-top-pagination.png);
-    background-repeat: no-repeat;
-    z-index: 1;
-    top: 20px;
-    
-    
-}
-button.slick-next.slick-arrow:hover {
-    background-image: url(./images/slider-top-pagination-hov.png);
-    background-repeat: no-repeat;
-    z-index: 1;
-}
-
-button.slick-prev.slick-arrow {
-        top: 280px;
-        right: 8%!important;
-        position: absolute;
-      
-        left: 1070px!important;
-        background-image: url(./images/slider-bottom-pagination.png)!important;
-        background-repeat: no-repeat;
-        z-index: 1;
-}  
-
-button.slick-prev.slick-arrow:hover {
-    background-image: url(./images/slider-bottom-pagination-hov.png)!important;
-    background-repeat: no-repeat;
-    z-index: 1;
-}
-
-.container.side {
-    background-color: #00000091;
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    width: 50px;
-    height: 300px;
-    top: 167px;
-    position: absolute;
-    left: 1177px;
-}
-
-.slick-dotted.slick-slider {
-    margin-bottom: 30px;
-    width: 100vw!important;
 }
