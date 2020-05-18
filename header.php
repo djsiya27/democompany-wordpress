@@ -6,12 +6,14 @@
     <title>Demo Company</title>
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
     <header>
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="logo">
+                <a href="<?php echo get_option('home'); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="logo">
+                </a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -26,9 +28,6 @@
                             'items_wrap'     => '<ul class="navbar-nav">%3$s</ul>'
                         ));
                     }
-
-
-
                     ?>
                 </div>
               </nav>
@@ -36,9 +35,6 @@
     </header>
     <div class="container-fluid slider-container">
         <div class="container">
-            <div class="blog-header">
-            <?php if($description) { ?><p class="lead blog-description"><?php echo $description ?></p><?php } ?>
-            </div>
             <div class="container slider">
             <?php get_template_part('parts/slider'); ?>
             </div>

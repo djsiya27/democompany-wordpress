@@ -5,6 +5,22 @@ function democompany_wp_setup() {
 }
 add_action( 'after_setup_theme', 'democompany_wp_setup' );
 
+
+function democompany_theme_logo() {
+    add_theme_support( 'custom-logo', array(
+        'height'      => 100,
+        'width'       => 400,
+        'flex-width' => true ) );
+    }
+add_action( 'after_setup_theme', 'democompany_theme_logo' );
+
+add_post_type_support( 'page', 'excerpt' );
+
+function wpc_cat_pages() {
+    register_taxonomy_for_object_type('category', 'page');
+}
+add_action('init', 'wpc_cat_pages');
+
 function democompany_style(){
 
      wp_enqueue_style('styles', get_stylesheet_uri() );
@@ -91,8 +107,42 @@ function custom_bootstrap_slider() {
 		'has_archive'        => true,
 		'hierarchical'       => true,
 		'menu_position'      => null,
-		'supports'           => array('title','editor','thumbnail')
+		'supports'           => array('title','editor','thumbnail'),
+		'taxonomies'          => array( 'category' ),
 	);
 
+
 	register_post_type( 'slider', $args );
+
+	
 }
+
+function logo_display()
+{
+    ?>
+        <input type="hidden" name="ologo" value="<?php echo get_option('logo'); ?>" readonly /><input type="file" name="logo" id="imgupload" style="display: none;" />
+  <a id="OpenImgUpload" class="button button-primary">Image Upload</a>
+        <?php echo get_option('logo'); ?>
+   <?php
+}
+function handle_logo_upload()
+{
+    if(isset($_FILES["logo"]) && !empty($_FILES['logo']['name']))
+    {
+        $urls = wp_handle_upload($_FILES["logo"], array('test_form' => FALSE));
+        $temp = $urls["url"];
+       return $temp;
+    }
+ elseif(isset($_FILES["logo"]) && empty($_FILES['logo']['name'])){
+  $urls = $_POST["ologo"];
+  return $urls;
+ }
+   return $option;
+} 
+function display_theme_panel_fields()
+{
+    add_settings_section("section", "All Settings", null, "theme-options");
+    add_settings_field("logo", "Logo", "logo_display", "theme-options", "section");  
+    register_setting("section", "logo", "handle_logo_upload");
+}
+add_action("admin_init", "display_theme_panel_fields");
