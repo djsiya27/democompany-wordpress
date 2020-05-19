@@ -371,16 +371,16 @@ p.slider-paragraph {
 }
 
 
-.rpwwt-widget ul {
+.rpwe-ul ul {
     list-style: none;
     
 }
 
-.rpwwt-widget ul li{
+.rpwe-li rpwe-clearfix li{
     padding-bottom: 20px!important;
 }
 
-.rpwwt-widget ul li a{
+h3.rpwe-title a{
     color:#999999;
     font-family: Tahoma;
     font-size: 13px;
@@ -389,7 +389,7 @@ p.slider-paragraph {
     text-decoration: none;
 }
 
-.rpwwt-widget ul li a:hover{
+h3.rpwe-title a:hover{
     color: #993408;
 }
 
