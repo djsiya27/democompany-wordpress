@@ -10,15 +10,28 @@
                 <div class="col-md-auto">
                     
                         <div class="box1">
-                        <ul>
                         <?php
-                        $children = wp_list_pages( 'title_li=&child_of='.$post->ID.'&echo=0' );
-                        if ( $children) : ?>
-                            <ul>
-                                <?php echo $children; ?>
-                            </ul>
-                        <?php endif; ?>
-                            </ul>
+                            if ( $post->post_parent ) {
+                                $children = wp_list_pages( array(
+                                    'title_li' => '',
+                                    'child_of' => $post->post_parent,
+                                    'echo'     => 0
+                                ) );
+                                $title = get_the_title( $post->post_parent );
+                            } else {
+                                $children = wp_list_pages( array(
+                                    'title_li' => '',
+                                    'child_of' => $post->ID,
+                                    'echo'     => 0
+                                ) );
+                            }
+                            
+                            if ( $children ) : ?>
+                                <h2><?php echo $title; ?></h2>
+                                <ul>
+                                    <?php echo $children; ?>
+                                </ul>
+                            <?php endif; ?>
                         </div>
                     
                 </div>
@@ -37,7 +50,7 @@
                     
                         <div class="box">
                             <div class="image">
-                            <?php the_post_thumbnail(); ?>
+                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
                             </div>
                             <div class="post-heading">
                                 <h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>

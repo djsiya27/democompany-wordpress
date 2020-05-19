@@ -234,7 +234,34 @@ p.slider-paragraph {
     color: #993408;
 }
 
-li.page_item {
+.title-heading{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    color: #993408;
+}
+
+.title-heading a{
+    color: #993408;
+    text-decoration: none;
+}
+
+.title-heading a:hover{
+    color: #993408;
+    text-decoration: none;
+}
+
+.content{
+    color: #666;
+}
+
+.posts{
+    border: rgba(102, 102, 102, 0.137) 1px solid;
+    margin:0 auto;
+    padding-top: 15px;
+
+}
+
+.box1 li.page_item {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 17px;
     color: #993408;
@@ -257,36 +284,37 @@ li.page_item {
     padding-left: 20px;
 }
 
-ul li.page_item{
+.box1 ul li.page_item{
     list-style: none;
     
 }
 
-li.page_item a{
+.box1 li.page_item a{
     text-decoration: none;
     color: #993408;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 17px;
 }
 
-li.page_item a:hover{
+.box1 li.page_item a:hover{
     color: #fff;
 }
 
-li.page_item:hover{
+.box1 li.page_item:hover{
     color: #fff!important;
     background-image: url(./images/arrow.png);
-    background-position: center;
+    background-position: left;
     background-size: 100%;
     background-repeat: no-repeat;
     cursor: pointer;
+    
 }
 
-li.page_item a:first-child{
+.box1 li.page_item a:first-child{
     margin-top: 0;
 }
 
-li.page_item{
+.box1 li.page_item{
    padding-left: 20px;
    /*text-transform: uppercase;*/
    padding-right: 20px;
@@ -332,24 +360,40 @@ li.page_item{
     padding-bottom: 20px;
 }
 
-
-.footer-blog-link{
-    list-style: none;
-    display: flex;
-    color: #999999;
+.widget-title{
+    font-family: Tahoma;
+    color:#888;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-bottom: #999999 1px dotted;
+    padding-bottom: 20px;
 }
 
-.footer-blog-link p{
+
+.rpwwt-widget ul {
+    list-style: none;
+    
+}
+
+.rpwwt-widget ul li{
+    padding-bottom: 20px!important;
+}
+
+.rpwwt-widget ul li a{
+    color:#999999;
     font-family: Tahoma;
     font-size: 13px;
     color: #888;
-    padding-left: 20px;
-    align-items: center;
+    
+    text-decoration: none;
 }
 
-.footer-blog-link p:hover {
+.rpwwt-widget ul li a:hover{
     color: #993408;
 }
+
+
 
 .fas {
     color: #999999;
@@ -426,15 +470,18 @@ li.page_item{
     color:#ee802f;
 }
 
-.security
+ul#menu-security 
 {
     list-style: none;
-    color: #888;
     
 }
 
-.security:hover{
-    color: #993408;
+ul#menu-security li a{
+    color: #888!important;
+}
+
+ul#menu-security li a:hover{
+    color: #993408!important;
     cursor: pointer;
 }
 
