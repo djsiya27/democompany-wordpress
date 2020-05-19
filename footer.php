@@ -18,11 +18,11 @@
                 ?>
                 </div>
                 <div class="col-md-3">
-                    <h5 class="footer-header">Stay in Touch</h5>
-                    <li class="social-facebook"><i class="fab fa-facebook-square"></i><span class="facebook">Facebook</span></li>
-                    <li class="social-twitter"><i class="fab fa-twitter-square"></i><span class="twitter">Twitter</span></li>
-                    <li class="social-linkedin"><i class="fab fa-linkedin"></i><span class="linkedin">Linkedin</span></li>
-                    <li class="social-rss"><i class="fas fa-rss-square"></i><span class="rss">RSS</span></li>
+                <?php
+                  if(is_active_sidebar('footer-sidebar-3')){
+                  dynamic_sidebar('footer-sidebar-3');
+                  }
+                  ?>
                 </div>
                 <div class="col-md-3">
                   <?php

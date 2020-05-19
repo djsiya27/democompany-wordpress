@@ -403,13 +403,15 @@ h3.rpwe-title a:hover{
     color: #993408;
 }
 
-.recent{
-    list-style: none;
-    display:inline-flex;
-    justify-content: space-between;
+.social-icons {
+    display: flex;
 }
 
-.social-facebook{
+.social-icons h6{
+    display: flex;
+}
+
+.facebook{
     color: #999999;
     list-style: none;
     font-size: 1.2rem;
@@ -419,12 +421,12 @@ h3.rpwe-title a:hover{
     padding-left: 15px;
 }
 
-.social-facebook:hover{
-    color: #1877f2;
+.facebook:hover{
+    color: #1877f2!important;
 }
 
 
-.social-twitter{
+.twitter{
     color: #999999;
     list-style: none;
     font-size: 1.2rem;
@@ -434,12 +436,12 @@ h3.rpwe-title a:hover{
     padding-left: 15px;
 }
 
-.social-twitter:hover{
+.twitter:hover{
     color: #1da1f2;
 }
 
 
-.social-linkedin{
+.linkedin{
     color: #999999;
     list-style: none;
     font-size: 1.2rem;
@@ -450,13 +452,13 @@ h3.rpwe-title a:hover{
     padding-left: 15px;
 }
 
-.social-linkedin:hover{
+.linkedin:hover{
     color:#007bb5;
 }
 
 
 
-.social-rss{
+.rss{
     color: #999999;
     list-style: none;
     font-size: 1.2rem;
@@ -466,7 +468,7 @@ h3.rpwe-title a:hover{
     padding-left: 15px;
 }
 
-.social-rss:hover{
+.rss:hover{
     color:#ee802f;
 }
 
