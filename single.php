@@ -1,16 +1,18 @@
 <?php get_header(); ?>
 
-     <div class="container"> 
-        <?php    if ( have_posts() ) : ?>
+<div class="container">
+         <div class="row">
+            <div class="col-md-10 posts">
+            <?php    if ( have_posts() ) : ?>
             <?php while ( have_posts() ) : the_post(); ?>
-            <?php the_title( '<h2>', '</h2>' ); ?>
-            <?php the_post_thumbnail(); ?>
-            <?php the_excerpt(); ?>
+            <h2 class="title-heading"><?php the_title(  ); ?></h2>
+            <div class="image p-3 w-100 d-block"><?php the_post_thumbnail(); ?></div>
+            <p class="content"><?php the_content(); ?></p>
             <?php   endwhile; ?>
-        <?  else: ?>
-        <?php  _e( 'Sorry, no posts matched your criteria.', 'textdomain' ); ?>
         <?php  endif; ?>
+        </div>
+        </div>
+            
     </div>
-
 <?php get_footer(); ?>
 

@@ -4,17 +4,18 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-3">
-                    <h5 class="footer-header">Latest News</h5>
-                    <li class="footer-blog-link"><i class="fas fa-arrow-right"></i><p>Many desktop publishing packages and web page </p></li>
-                    <li class="footer-blog-link"><i class="fas fa-arrow-right"></i><p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s </p></li>
-                    <li class="footer-blog-link"~><i class="fas fa-arrow-right"></i><p>Latin words, combined with a handful of model sentence structures</p></li>
+                <?php
+                if(is_active_sidebar('footer-sidebar-1')){
+                dynamic_sidebar('footer-sidebar-1');
+                }
+                ?>
                 </div>
                 <div class="col-md-3">
-                    <h5 class="footer-header">Recent Projects</h5>
-                    <li class="recent"><img src="<?php echo get_template_directory_uri(); ?>./images/recent-pro-1.jpg" alt=""></li> 
-                    <li class="recent"><img src="<?php echo get_template_directory_uri(); ?>./images/recent-pro-2.jpg" alt=""></li>
-                    <li class="recent"><img src="<?php echo get_template_directory_uri(); ?>./images/recent-pro-3.jpg" alt=""></li>   
-                    
+                <?php
+                if(is_active_sidebar('footer-sidebar-2')){
+                dynamic_sidebar('footer-sidebar-2');
+                }
+                ?>
                 </div>
                 <div class="col-md-3">
                     <h5 class="footer-header">Stay in Touch</h5>
@@ -24,10 +25,11 @@
                     <li class="social-rss"><i class="fas fa-rss-square"></i><span class="rss">RSS</span></li>
                 </div>
                 <div class="col-md-3">
-                    <h5 class="footer-header">Security & Privacy</h5>
-                    <li class="security"><p>Security</p></li>
-                    <li class="security"><p>Privacy Policy</p></li>
-                    <li class="security"><p>Terms Of Service</p></li>
+                  <?php
+                  if(is_active_sidebar('footer-sidebar-4')){
+                  dynamic_sidebar('footer-sidebar-4');
+                  }
+                  ?>
                 </div>
             </div>
         </div>
