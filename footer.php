@@ -1,5 +1,9 @@
-<?php wp_footer(); ?>
+<?php wp_footer(); 
 
+$footer = esc_attr( get_option('footer_copyright'));
+$footer_logo = esc_attr( get_option('footer_logo'));
+
+?>
 <div class="container-fluid footer-section">
         <div class="container mt-5">
             <div class="row">
@@ -39,7 +43,6 @@
   <div class="row">
     <nav>
       <?php 
-      
       if(has_nav_menu('footer_menu')){
         wp_nav_menu(array(
             'theme-location' => 'footer_menu',
@@ -50,17 +53,13 @@
       
       ?>
     </nav>
-
     <div class="footer-logo">
-      <img src="<?php echo get_template_directory_uri(); ?>./images/footer-logo.png" alt="footer-logo">
+      <img src="<?php print $footer_logo ?>" alt="footer-logo">
     </div>
   </div>  
-
   <div class="container copyright">
-    &copy; 2020 rtPanel. All Rights Reserved. Designed by Siyabonga Majola for rtCamp 
+    &copy; <?php print $footer ?>
   </div>
-  
-
 </div>
 </body>
 </html>

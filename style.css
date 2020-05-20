@@ -371,16 +371,16 @@ p.slider-paragraph {
 }
 
 
-.rpwe-ul ul {
+ul.display-posts-listing {
     list-style: none;
     
 }
 
-.rpwe-li rpwe-clearfix li{
+li.listing-item{
     padding-bottom: 20px!important;
 }
 
-h3.rpwe-title a{
+.listing-item a.title{
     color:#999999;
     font-family: Tahoma;
     font-size: 13px;
@@ -389,7 +389,7 @@ h3.rpwe-title a{
     text-decoration: none;
 }
 
-h3.rpwe-title a:hover{
+.listing-item a.title:hover{
     color: #993408;
 }
 
